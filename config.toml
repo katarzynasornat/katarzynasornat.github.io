@@ -4,7 +4,7 @@ title = "Hugo Future Imperfect"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 3
-disqusShortname = "katarzynamagorzatasornat"
+disqusShortname = "shortname"
 googleAnalytics = ""
 pluralizeListTitles = false
 # Set the followings to true as part of your site SEO
@@ -146,7 +146,7 @@ publishDir = "docs"
 # and socialAppearAtBottom.
 [social]
   # Coding Communities
-  github           = "jpescador/hugo-future-imperfect"
+  github           = "katarzynasornat"
   gitlab           = ""
   stackoverflow    = "" # User Number
   bitbucket        = ""
@@ -154,20 +154,17 @@ publishDir = "docs"
   codepen          = ""
   # Visual Art Communities
   deviantart       = ""
-  flickr           = "example"
   behance          = ""
   dribbble         = ""
   # Publishing Communities
   wordpress        = ""
   medium           = ""
   # Professional/Business Oriented Communities
-  linkedin         = "example"
-  linkedin_company = "examplebusiness"
+  linkedin         = "katarzynasornat"
   foursquare       = ""
   xing             = ""
   slideshare       = ""
   # Social Networks
-  facebook         = "example"
   googleplus       = ""
   reddit           = "example"
   quora            = ""
@@ -177,16 +174,16 @@ publishDir = "docs"
     # WeChat and QQ need testing.
     wechat         = ""
     qq             = "" # User ID Number
-  instagram        = "example"
+  instagram        = ""
   tumblr           = ""
-  twitter          = "example"
+  twitter          = ""
   skype            = ""
   snapchat         = ""
-  pinterest        = "example"
-  telegram         = "example"
+  pinterest        = ""
+  telegram         = ""
   vine             = ""
   googlescholar    = ""
   orcid            = ""
-  researchgate     = "example"
+  researchgate     = ""
   # Email
-  email            = "example"
+  email            = ""
