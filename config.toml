@@ -47,10 +47,10 @@ publishDir = "docs"
   socialShareTwitter   = true
   socialShareGoogleplus = true
   socialShareFacebook  = true
-  socialShareReddit    = true
+  socialShareReddit    = false
   socialShareLinkedin  = true
-  socialShareStumbleupon = true
-  socialSharePinterest = true
+  socialShareStumbleupon = false
+  socialSharePinterest = false
   socialShareEmail     = true
 
   # Load custom CSS or JavaScript files. The variable is an array so that you
@@ -92,7 +92,7 @@ publishDir = "docs"
 
   paragraph = "Another fine responsive site template by <a href=\"http://html5up.net\">HTML5 UP</a>. Ported by Julio Pescador with some extra goodies <i class='fa fa-hand-peace-o'></i>"
 
-  about     = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus lacus, auctor vehicula molestie quis, tempor quis velit. Quisque in quam ac leo efficitur vulputate. Phasellus ullamcorper aliquam sodales. Maecenas sit amet condimentum ipsum. Proin sit amet ligula elit. Mauris."
+  about     = "Hi, my name is Kasia! Welcome on my page. I graduated Mathematics at the University of Wroclaw in Poland. After that I started working as a (very popular nowadays) Data Scientist. And that is basically the reason, why I started this blog - I did not want to loose my math skills in the business. To read more please go to 'ABOUT' tab."
 
   # This appears at the top of the sidebar above params.intro.header.
   # A width of less than 100px is recommended from a design perspective.
