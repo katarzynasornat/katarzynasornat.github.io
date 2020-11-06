@@ -92,6 +92,15 @@ With Jekyll, something that looked like&lt;/p&gt;
     </item>
     
     <item>
+      <title>ABC Kasia</title>
+      <link>/blog/my_first_post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/my_first_post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R Notebook</title>
       <link>/blog/first_try/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
