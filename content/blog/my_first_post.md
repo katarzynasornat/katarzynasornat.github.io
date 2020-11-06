@@ -1,7 +1,7 @@
 +++
 author = "ABC"
 categories = [""]
-date = ""
+date = "2020-11-06"
 description = "This is a trial"
 featured = ""
 featuredalt = ""
