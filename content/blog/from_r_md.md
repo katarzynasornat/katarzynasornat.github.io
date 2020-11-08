@@ -2,10 +2,8 @@
 title: "newmd"
 author: 'null'
 date: '2020-11-08'
-output: pdf_document
 categories: []
 tags: []
-draft: yes
 slug: []
 ---
 

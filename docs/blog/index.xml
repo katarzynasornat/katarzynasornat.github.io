@@ -6,7 +6,17 @@
     <description>Recent content in Blog on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>newmd</title>
+      <link>/blog/from_r_md/</link>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/from_r_md/</guid>
+      <description>Let&amp;rsquo;s add a table, just for kicks.
+   hours of sun happiness     0 1   3 4   5 7   7 10    mean(iris$Sepal.Length)require(ggplot2)ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +geom_point() +geom_smooth(method = &amp;quot;lm&amp;quot;) + scale_color_manual(values = c(&amp;quot;#3B9AB2&amp;quot;, &amp;quot;#E4B80E&amp;quot;, &amp;quot;#F21A00&amp;quot;))</description>
+    </item>
+    
     <item>
       <title>ABC Kasia</title>
       <link>/blog/my_first_post/</link>
