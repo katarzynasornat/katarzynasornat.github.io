@@ -1,22 +1,284 @@
 ---
-title: "abc"
-author: "kasia"
+title: "Gentle introduction to Linear Regression"
+author: "Katarzyna Sornat"
 date: "8 11 2020"
 output:
+  revealjs::revealjs_presentation: default
+  pdf_document: default
   html_document:
     df_print: paged
-  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE)
+
 ```
 
-## R Markdown
+```{r, eval=TRUE, echo = FALSE}
+colorize <- function(x, color) {
+  if (knitr::is_latex_output()) {
+    sprintf("\\textcolor{%s}{%s}", color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color, 
+      x)
+  } else x
+}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+dataset <- read.csv("C:/Users/kasor1/Downloads/calories_smoothie.csv", sep = ";", header = TRUE)
+```
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+## Linear regression
+
+Linear regression is used for finding linear relationship between target and one or more predictors. There are two types of linear regression- Simple (one explanatory variable/predictor/independent variable) and Multiple (more predictors).
+
+### Secret smoothies
+
+Smoothie recipe
+
+* 1 cup plain yogurt
+* 1 secret ingredient
+* random food dyes
+
+Blend ingredients. Serve.
+
+
+### Predict calories
+
+What's inside?
+
+* 1 cup plain yogurt
+* `r colorize("1 secret ingredient", "blue")`
+* random food dyes
+
+### Sardine smoothie!
+
+What's inside?
+
+* 1 cup plain yogurt
+* `r colorize("58 g sardines in tomato sauce", "blue")`
+* random food dyes
+
+`r colorize("233 Calories", "red")`
+
+### Predict calories
+
+What's inside?
+
+* 1 cup plain yogurt
+* `r colorize("1 secret ingredient", "blue")`
+* random food dyes
+
+### Waffle mix smoothie!
+
+What's inside?
+
+* 1 cup plain yogurt
+* `r colorize("56 g waffle mix", "blue")`
+* random food dyes
+
+`r colorize("301 Calories", "red")`
+
+
+
+### Predict calories
+
+What's inside?
+
+* 1 cup plain yogurt
+* `r colorize("1 secret ingredient", "blue")`
+* random food dyes
+
+### Predict the calories
+
+Can we use something?
+
+
+
+### Predict the calories
+
+Calories of 15 of our smoothies:
+
+713, 288, 268, 252, 306,
+301, 233, 150, 143, 416,
+414, 155, 383, 258, 292
+
+### Predict the calories
+
+Calories of 15 of our smoothies:
+
+mean `r mean(c(713, 288, 268, 252, 306, 301, 233, 150, 143, 416, 414, 155, 383, 258, 292))`
+median `r median(c(713, 288, 268, 252, 306, 301, 233, 150, 143, 416, 414, 155, 383, 258, 292))`
+
+
+
+
+### Mascarpone smoothie!
+
+What's inside?
+
+* 1 cup plain yogurt
+* `r colorize("72 g Mascarpone", "blue")`
+* random food dyes
+
+`r colorize("447 Calories", "red")`
+
+### How did we do?
+
+Underestimate = `r mean(c(713, 288, 268, 252, 306, 301, 233, 150, 143, 416, 414, 155, 383, 258, 292))`
+
+### Can we do better?
+
+Underestimate = `r mean(c(713, 288, 268, 252, 306, 301, 233, 150, 143, 416, 414, 155, 383, 258, 292))`
+
+Use weight of the secret ingredient!
+
+
+### Predict the calories
+
+```{r}
+
+library(ggplot2)
+# Basic scatter plot
+ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point()
+
+
+```
+
+
+
+### Put A Line Through It!
+
+```{r}
+
+library(ggplot2)
+# Basic scatter plot
+ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point() + geom_abline(intercept = 350, slope = 6, colour = "red")
+
+
+```
+
+Smoothie_calories = Intercept + Slope * weight
+
+### Put A Line Through It!
+
+```{r}
+
+library(ggplot2)
+# Basic scatter plot
+ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point() + geom_abline(intercept = 150, slope = 0.5, colour = "red")
+
+
+```
+
+
+### Put A Line Through It!
+
+```{r}
+
+library(ggplot2)
+# Basic scatter plot
+ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point() + geom_abline(intercept = 210, slope = 1, colour = "red")
+
+
+```
+
+
+### Put A Line Through It!
+
+```{r}
+
+library(ggplot2)
+# Basic scatter plot
+ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point() + geom_abline(intercept = mean(c(713, 288, 268, 252, 306, 301, 233, 150, 143, 416, 414, 155, 383, 258, 292)), slope = 0, colour = "red")
+
+```
+
+This is our previous model!
+
+We can do better!
+
+
+
+### Put A Line Through It!
+
+Let's find a line that is as close points as possible!
+
+```{r}
+
+library(ggplot2)
+# Basic scatter plot
+ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point() + geom_abline(intercept = mean(c(713, 288, 268, 252, 306, 301, 233, 150, 143, 416, 414, 155, 383, 258, 292)), slope = 0, colour = "red")
+
+```
+
+
+
+
+### Put A Line Through It!
+
+Define error as point-line. If we want a line close to the points, we don't like errors.
+
+```{r}
+
+library(ggplot2)
+# Basic scatter plot
+ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point() + geom_abline(intercept = mean(c(713, 288, 268, 252, 306, 301, 233, 150, 143, 416, 414, 155, 383, 258, 292)), slope = 0, colour = "red")
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Introduction - simple linear regression
+
+Linear regression attempts to model the relationship between two variables by fitting a linear equation (= a straight line) to the observed data. One variable is considered to be an explanatory variable (e.g. your income), and the other is considered to be a dependent variable (e.g. your expenses)
+
+Simple linear regression is useful for finding relationship between two continuous variables. It looks for statistical relationship but not deterministic relationship. Relationship between two variables is said to be deterministic if one variable can be accurately expressed by the other. For example, using temperature in degree Celsius it is possible to accurately predict Fahrenheit. Statistical relationship is not accurate in determining relationship between two variables. For example, relationship between height and weight.
+
+Here’s how we do linear regression
+1. We plot our dependent variable (y-axis) against the independent variable (x-axis)
+2. We try to plot a straight line and measure correlation
+3. We keep changing the direction of our straight line until we get the best correlation
+4. We extrapolate from this line to find new values on y-axis
+
+### How to find the best line
+
+### Why do we need assumptions?
+
+### Let's code sth!
+
+
+
+## Generalized Linear Model on Logistic Regression example
+
+## Generalized Addivitve Models
+
+
 
 ```{r cars}
 summary(cars)
@@ -29,5 +291,3 @@ You can also embed plots, for example:
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
