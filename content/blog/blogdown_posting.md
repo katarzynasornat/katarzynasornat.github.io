@@ -8,7 +8,7 @@ tags: []
 description: 'Putting Hugo, blogdown and RStudio together'
 featured: 'first_post.jpg'
 featuredalt: 'Pic 4'
-featuredpath: '/img/rmd_images/first_post.jpg'
+featuredpath: '/img/rmd_images'
 linktitle: ''
 type: post
 ---
