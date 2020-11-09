@@ -6,26 +6,7 @@
     <description>Recent content in Blog on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ABC markdown</title>
-      <link>/blog/markdown_try/</link>
-      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/markdown_try/</guid>
-      <description>Let&amp;rsquo;s add a table, just for kicks.
-   hours of sun happiness     0 1   3 4   5 7   7 10    mean(iris$Sepal.Length)require(ggplot2)ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +geom_point() +geom_smooth(method = &amp;quot;lm&amp;quot;) + scale_color_manual(values = c(&amp;quot;#3B9AB2&amp;quot;, &amp;quot;#E4B80E&amp;quot;, &amp;quot;#F21A00&amp;quot;))</description>
-    </item>
-    
-    <item>
-      <title>ABC Kasia</title>
-      <link>/blog/my_first_post/</link>
-      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/my_first_post/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a New Theme</title>
       <link>/blog/creating-a-new-theme/</link>
@@ -72,18 +53,6 @@ With Jekyll, something that looked like&lt;/p&gt;
     ▾ images/
         logo.png
 &lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>R Notebook</title>
-      <link>/blog/first_try/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/first_try/</guid>
-      <description>This is an R Markdown Notebook. When you execute code within the notebook, the results appear beneath the code.
-Try executing this chunk by clicking the Run button within the chunk or by placing your cursor inside it and pressing Ctrl+Shift+Enter.
-Add a new chunk by clicking the Insert Chunk button on the toolbar or by pressing Ctrl+Alt+I.
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the Preview button or press Ctrl+Shift+K to preview the HTML file).</description>
     </item>
     
   </channel>
