@@ -1,11 +1,11 @@
 ---
-title: "rmd_try"
-author: "Kasia"
+title: "RMARKDOWN"
+author: ''
 date: '2020-11-09'
 slug: []
 categories: []
 tags: []
-description: trial to post from rmd
+description: ABC
 featured: ''
 featuredalt: ''
 featuredpath: ''
@@ -24,8 +24,7 @@ Let's add a table, just for kicks.
 | 7 | 10 |
 
 
-```{r}
-library(ggplot)
+```{r echo=FALSE}
 
 mean(iris$Sepal.Length)
 require(ggplot2)

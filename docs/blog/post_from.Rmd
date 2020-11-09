@@ -25,6 +25,7 @@ Let's add a table, just for kicks.
 
 
 ```{r}
+library(ggplot)
 
 mean(iris$Sepal.Length)
 require(ggplot2)
