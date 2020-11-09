@@ -11,6 +11,5 @@ featuredalt: ''
 featuredpath: ''
 linktitle: ''
 type: post
-draft: true
 ---
 

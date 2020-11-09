@@ -6,7 +6,16 @@
     <description>Recent content in Blog on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to post markdown using blogdown package</title>
+      <link>/blog/blogdown_posting/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/blogdown_posting/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Creating a New Theme</title>
       <link>/blog/creating-a-new-theme/</link>
