@@ -2,11 +2,9 @@
 title: "Gentle introduction to Linear Regression"
 author: "Katarzyna Sornat"
 date: "8 11 2020"
-output:
-  revealjs::revealjs_presentation: default
-  pdf_document: default
-  html_document:
-    df_print: paged
+output: 
+  revealjs::revealjs_presentation:
+    transition: fade
 ---
 
 ```{r setup, include=FALSE}
@@ -28,11 +26,11 @@ dataset <- read.csv("C:/Users/kasor1/Downloads/calories_smoothie.csv", sep = ";"
 ```
 
 
-## Linear regression
+# Linear regression
 
 Linear regression is used for finding linear relationship between target and one or more predictors. There are two types of linear regression- Simple (one explanatory variable/predictor/independent variable) and Multiple (more predictors).
 
-### Secret smoothies
+## Secret smoothies
 
 Smoothie recipe
 
@@ -43,7 +41,7 @@ Smoothie recipe
 Blend ingredients. Serve.
 
 
-### Predict calories
+## Predict calories
 
 What's inside?
 
@@ -51,7 +49,7 @@ What's inside?
 * `r colorize("1 secret ingredient", "blue")`
 * random food dyes
 
-### Sardine smoothie!
+## Sardine smoothie!
 
 What's inside?
 
@@ -61,7 +59,7 @@ What's inside?
 
 `r colorize("233 Calories", "red")`
 
-### Predict calories
+## Predict calories
 
 What's inside?
 
@@ -69,7 +67,7 @@ What's inside?
 * `r colorize("1 secret ingredient", "blue")`
 * random food dyes
 
-### Waffle mix smoothie!
+## Waffle mix smoothie!
 
 What's inside?
 
@@ -81,7 +79,7 @@ What's inside?
 
 
 
-### Predict calories
+## Predict calories
 
 What's inside?
 
@@ -89,13 +87,15 @@ What's inside?
 * `r colorize("1 secret ingredient", "blue")`
 * random food dyes
 
-### Predict the calories
+
+
+## Predict the calories
 
 Can we use something?
 
 
 
-### Predict the calories
+## Predict the calories
 
 Calories of 15 of our smoothies:
 
@@ -103,7 +103,7 @@ Calories of 15 of our smoothies:
 301, 233, 150, 143, 416,
 414, 155, 383, 258, 292
 
-### Predict the calories
+## Predict the calories
 
 Calories of 15 of our smoothies:
 
@@ -113,7 +113,7 @@ median `r median(c(713, 288, 268, 252, 306, 301, 233, 150, 143, 416, 414, 155, 3
 
 
 
-### Mascarpone smoothie!
+## Mascarpone smoothie!
 
 What's inside?
 
@@ -123,18 +123,20 @@ What's inside?
 
 `r colorize("447 Calories", "red")`
 
-### How did we do?
+## How did we do?
 
 Underestimate = `r mean(c(713, 288, 268, 252, 306, 301, 233, 150, 143, 416, 414, 155, 383, 258, 292))`
 
-### Can we do better?
+## Can we do better?
 
 Underestimate = `r mean(c(713, 288, 268, 252, 306, 301, 233, 150, 143, 416, 414, 155, 383, 258, 292))`
 
 Use weight of the secret ingredient!
 
+\[ e_t = a_t - f_t \]
 
-### Predict the calories
+
+## Predict the calories
 
 ```{r}
 
@@ -147,7 +149,7 @@ ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point()
 
 
 
-### Put A Line Through It!
+## Put A Line Through It!
 
 ```{r}
 
@@ -160,7 +162,7 @@ ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point() + geom_abline
 
 Smoothie_calories = Intercept + Slope * weight
 
-### Put A Line Through It!
+## Put A Line Through It!
 
 ```{r}
 
@@ -172,7 +174,7 @@ ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point() + geom_abline
 ```
 
 
-### Put A Line Through It!
+## Put A Line Through It!
 
 ```{r}
 
@@ -184,7 +186,7 @@ ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point() + geom_abline
 ```
 
 
-### Put A Line Through It!
+## Put A Line Through It!
 
 ```{r}
 
@@ -200,7 +202,7 @@ We can do better!
 
 
 
-### Put A Line Through It!
+## Put A Line Through It!
 
 Let's find a line that is as close points as possible!
 
@@ -215,7 +217,7 @@ ggplot(dataset, aes(x=weight, y=smoothie_calories)) + geom_point() + geom_abline
 
 
 
-### Put A Line Through It!
+## Put A Line Through It!
 
 Define error as point-line. If we want a line close to the points, we don't like errors.
 
