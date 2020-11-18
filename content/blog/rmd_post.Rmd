@@ -1,6 +1,6 @@
 ---
-title: rmarkdown try
-author: Katarzyna Sornat
+title: "rmarkdown try"
+author: "Katarzyna Sornat"
 date: '2020-11-10'
 slug: []
 categories: []
