@@ -43,7 +43,12 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
 
 ```
 
+```{r}
+library(dygraphs)
+lungDeaths <- cbind(mdeaths, fdeaths)
+dygraph(lungDeaths) %>% dyRangeSelector()
 
+```
 
 ## Intro
 
