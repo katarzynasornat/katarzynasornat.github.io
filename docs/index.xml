@@ -6,7 +6,17 @@
     <description>Recent content on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>rmd_post_test</title>
+      <link>/blog/post_18112020/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/post_18112020/</guid>
+      <description>1. Set up a Github repository2. Install Hugo3. Post from RStudio using RMarkdownLet’s add a table, just for kicks.
+hours of sunhappiness013457710library(ggplot2)mean(iris$Sepal.Length)## [1] 5.843333require(ggplot2)ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +geom_point() +geom_smooth(method = &amp;quot;lm&amp;quot;) + scale_color_manual(values = c(&amp;quot;#3B9AB2&amp;quot;, &amp;quot;#E4B80E&amp;quot;, &amp;quot;#F21A00&amp;quot;))## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;IntroThis post is the result of my journey with setting up the page by using:Hugo: for the templateGithub Pages: for hosting.</description>
+    </item>
+    
     <item>
       <title>How to post markdown using blogdown R package</title>
       <link>/blog/blogdown_posting/</link>

@@ -1,0 +1,72 @@
+---
+title: rmd_post_test
+author: Kasia
+date: '2020-11-18'
+slug: []
+categories: []
+tags: []
+description: 'jskskjdkjs'
+featured: ''
+featuredalt: ''
+featuredpath: ''
+linktitle: ''
+type: post
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="set-up-a-github-repository" class="section level2">
+<h2>1. Set up a Github repository</h2>
+</div>
+<div id="install-hugo" class="section level2">
+<h2>2. Install Hugo</h2>
+</div>
+<div id="post-from-rstudio-using-rmarkdown" class="section level2">
+<h2>3. Post from RStudio using RMarkdown</h2>
+<p>Let’s add a table, just for kicks.</p>
+<table>
+<thead>
+<tr class="header">
+<th>hours of sun</th>
+<th>happiness</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>library(ggplot2)
+mean(iris$Sepal.Length)</code></pre>
+<pre><code>## [1] 5.843333</code></pre>
+<pre class="r"><code>require(ggplot2)
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point() +
+  geom_smooth(method = &quot;lm&quot;) + 
+  scale_color_manual(values = c(&quot;#3B9AB2&quot;, &quot;#E4B80E&quot;, &quot;#F21A00&quot;))</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/blog/post_18112020_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="intro" class="section level2">
+<h2>Intro</h2>
+<p>This post is the result of my journey with setting up the page by using:
+Hugo: for the template
+Github Pages: for hosting.</p>
+<p>What was important for me, I also wanted to post my RMarkdown files, as I am R-lady. I went through many pages with the guidelines and in this post I will show you, how to make it happen!</p>
+</div>
